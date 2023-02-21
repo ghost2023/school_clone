@@ -1,0 +1,368 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+    <title>
+      ST. MARY'S UNIVERSITY COLLEGE STUDENTS' RECORD MANAGEMENT SYSTEM
+    </title>
+    <link rel="stylesheet" type="text/css" href="./assets/style.css" />
+    <style type="text/css">
+        body {
+            margin:0;
+            padding:0;
+            font:  11px/1.5em Verdana;
+      }
+
+      h2 {
+              font: 5px Verdana, Arial, Helvetica, sans-serif;
+              color: #000;
+              margin: 0px;
+              padding: 0px 0px 0px 15px;
+      }
+
+      /*- Menu Tabs F--------------------------- */
+
+          #tabs1 {
+            float:left;
+            width:100%;
+            background:#F4F7FB;
+            font-size:85%;
+            line-height:normal;
+                border-bottom:1px solid #BCD2E6;
+      		    	  font: bold 9px/1.5em Verdana;
+            }
+          #tabs1 ul {
+                margin:0;
+                padding:10px 10px 0 5px;
+                list-style:none;
+            }
+          #tabs1 li {
+            display:inline;
+            margin:0;
+            padding:0;
+            }
+          #tabs1 a {
+            float:left;
+            background:url("tableft1.gif") no-repeat left top;
+            margin:0;
+            padding:0 0 0 4px;
+            text-decoration:none;
+            }
+          #tabs1 a span {
+            float:left;
+            display:block;
+            background:url("tabright1.gif") no-repeat right top;
+            padding:5px 10px 4px 6px;
+            color:#627EB7;
+            }
+          #tabs1 a span {float:none;}
+          #tabs a:hover span {
+            color:#627EB7;
+            }
+          #tabs1 a:hover {
+            background-position:0% -42px;
+            }
+          #tabs1 a:hover span {
+            background-position:100% -42px;
+            }
+
+            #tabs1 #current a {
+                    background-position:0% -42px;
+            }
+            #tabs1 #current a span {
+                    background-position:100% -42px;
+            }
+      -->
+    </style>
+  </head>
+  <body background="./assets/bg.jpg">
+    <br />
+    <div id="center2">
+      <table height="100%" width="100%" cellspacing="0" cellpadding="1">
+        <tbody>
+          <tr>
+            <td valign="bottom" colspan="0">
+              <div><img src="./assets/EA Banner5.jpg" width="771" /></div>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              <div id="tabs1">
+                <ul>
+                  <!-- CSS Tabs -->
+
+                  <li id="current">
+                    <a><span>Home</span></a>
+                  </li>
+
+                  <li>
+                    <a><span>Academic Calender</span></a>
+                  </li>
+
+                  <li>
+                    <a><span>Admission</span></a>
+                  </li>
+
+                  <li>
+                    <a><span>Course List</span></a>
+                  </li>
+
+                  <li>
+                    <a><span>Online Application</span></a>
+                  </li>
+
+                  <li>
+                    <a><span>Policies &amp; Procedures</span></a>
+                  </li>
+
+                  <li>
+                    <a><span>Notice</span></a>
+                  </li>
+
+                  <li>
+                    <a><span>Contact Us</span></a>
+                  </li>
+
+                  <li>
+                    <a><span>About</span></a>
+                  </li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+
+      <div id="center2">
+        <table>
+          <tbody>
+            <tr>
+              <td valign="top">
+                <br /><br />
+                <form name="index" method="post" action="" id="loginform">
+                  <input type="hidden" name="refresh" value="399933" />
+                  <table cellspacing="0" cellpadding="1">
+                    <tbody>
+                      <tr>
+                        <td align="left" width="34%">
+                          <font
+                            color="#004488"
+                            face="Times New Roman, Times, serif"
+                            size="2"
+                            ><strong>Login Id:</strong></font
+                          >
+                        </td>
+                        <td align="left">
+                          <input type="text" name="ID" size="20" id="uid" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="left" width="34%">
+                          <font
+                            color="#004488"
+                            face="Times New Roman, Times, serif"
+                            size="2"
+                            ><strong>Password:</strong></font
+                          >
+                        </td>
+                        <td align="left">
+                          <input
+                            type="password"
+                            name="PASS"
+                            size="20"
+                            id="pw"
+                          />
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <table align="center">
+                    <tbody>
+                      <tr>
+                        <td align="center">
+                          <br /><br /><input
+                            type="image"
+                            name="submit"
+                            src="./assets/login.jpg"
+                            border="0"
+                          />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <a
+                              href="http://moodle.smuc.edu.et/students/index.php"
+                              ><font color="#627EB7"><u></u></font
+                            ></a>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </form>
+                <script>
+                  var idField = document.getElementById("uid");
+                  var form = document.getElementById("loginform");
+                  var passwordField = document.getElementById("pw");
+
+                  form.addEventListener("submit", (e) => {
+                    e.preventDefault();
+                    if (idField.value && passwordField.value)
+                      window.location.href = "/grades.html";
+                  });
+                </script>
+              </td>
+              <td
+                width="310"
+                background="./assets/OurVisionNull.jpg"
+                height="210"
+              ></td>
+              <td
+                width="285"
+                height="210"
+                background="./assets/image14.jpg"
+              ></td>
+            </tr>
+          </tbody>
+        </table>
+        <table height="125" width="100%" cellpadding="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <td width="235" background="./assets/Announce1.jpg">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                      <td>
+                        <br />
+                        <font color="#004000"
+                          ><br />
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <br />
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <a target="_blank"
+                            ><font size="2"
+                              >&nbsp;&nbsp;<font
+                                color="#FF0000"
+                              ></font></font></a
+                        ></font>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+              <td width="290" background="./assets/announce2.jpg"></td>
+              <td
+                width="280"
+                bgcolor="#E8E8E8"
+                background="./assets/Announce3.jpg"
+                valign="top"
+              >
+                <br /><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <font color="#004000"
+                  ><br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <a
+                    href="http://moodle.smuc.edu.et/students/uploads/"
+                    target="_blank"
+                    ><font size="2"
+                      >&nbsp;&nbsp;<font color="#FF0000"></font></font></a
+                ></font>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <img src="./assets/line1.jpg" width="771" height="2" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="./assets/line1.jpg" width="771" height="2" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table width="100%">
+          <tbody>
+            <tr>
+              <td width="15%"></td>
+              <td align="center">
+                <a href="http://www.stmarycollege.edu.et/" target="_blank"
+                  ><img
+                    src="./assets/SMUC Home.jpg"
+                    width="100"
+                    height="15"
+                    border="0"
+                /></a>
+              </td>
+              <td align="center">
+                <a href="http://www.google.com/" target="_blank"
+                  ><img
+                    src="./assets/google.gif"
+                    width="80"
+                    height="15"
+                    border="0"
+                /></a>
+              </td>
+              <td align="center">
+                <a href="http://www.yahoo.com/" target="_blank"
+                  ><img
+                    src="./assets/yahoo.gif"
+                    width="100"
+                    height="15"
+                    border="0"
+                /></a>
+              </td>
+              <td align="center">
+                <a href="http://www.facebook.com/" target="_blank"
+                  ><img
+                    src="./assets/facebook.jpg"
+                    width="100"
+                    height="15"
+                    border="0"
+                /></a>
+              </td>
+              <td width="15%"></td>
+            </tr>
+          </tbody>
+        </table>
+        <table width="100%">
+          <tbody>
+            <tr>
+              <td>
+                <img src="./assets/line1.jpg" width="771" height="2" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="./assets/line1.jpg" width="771" height="2" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table width="100%">
+          <tbody>
+            <tr>
+              <td valign="top" align="right">
+                <font color="#D2D2D2"
+                  >Copyright � 2010 St. Mary's University College <br />Designed
+                  By Nebiyu Hailetsion
+                </font>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
